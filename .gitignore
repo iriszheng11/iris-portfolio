@@ -1,0 +1,17 @@
+.DS_Store
+.pycache_check/
+__pycache__/
+*.pyc
+*.pyo
+*.py
+*.blend
+*.blend1
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.mtl
+*.psd
+*.ai
+*.sketch
+*.fig
