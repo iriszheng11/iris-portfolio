@@ -17,7 +17,6 @@ let scrollStart = 0;
 let audioContext;
 let audioOutput;
 const clickVolume = 0.75;
-let lastSlideSoundTime = 0;
 const trailPixels = [];
 const trailColors = ["#ff62bd", "#98ff6d", "#69c4ff", "#ffe36d", "#ffffff"];
 let lastTrailX = 0;
@@ -50,6 +49,13 @@ const caseStudies = {
     pages: Array.from(
       { length: 7 },
       (_, index) => `./assets/projects/worldclaw/page-${index + 1}.png`
+    ),
+  },
+  newsbreak: {
+    eyebrow: ">> NEWSBREAK CASE",
+    pages: Array.from(
+      { length: 32 },
+      (_, index) => `./assets/projects/newsbreak-case/page-${String(index + 1).padStart(2, "0")}.png`
     ),
   },
 };
@@ -194,13 +200,6 @@ function playClickSound(type = "click") {
   oscillator.stop(now + settings[2] + 0.01);
 }
 
-function playSlideSound() {
-  const nowMs = performance.now();
-  if (nowMs - lastSlideSoundTime < 90) return;
-  lastSlideSoundTime = nowMs;
-  playClickSound("project");
-}
-
 function setCardState(name, isOpen) {
   const card = document.querySelector(`[data-card="${name}"]`);
   const button = document.querySelector(`[data-toggle="${name}"]`);
@@ -310,9 +309,6 @@ workspace.addEventListener("pointermove", (event) => {
   if (!isDragging) return;
   const distance = event.clientX - startX;
   workspace.scrollLeft = scrollStart - distance;
-  if (Math.abs(distance) > 6) {
-    playSlideSound();
-  }
 });
 
 workspace.addEventListener("pointerup", () => {
@@ -343,7 +339,6 @@ workspace.addEventListener(
 
     event.preventDefault();
     workspace.scrollBy({ left: event.deltaY, behavior: "auto" });
-    playSlideSound();
   },
   { passive: false }
 );

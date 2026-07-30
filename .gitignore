@@ -1,4 +1,9 @@
 .DS_Store
+.next/
+.pnpm-store/
+.wrangler/
+dist/
+node_modules/
 .pycache_check/
 __pycache__/
 *.pyc
