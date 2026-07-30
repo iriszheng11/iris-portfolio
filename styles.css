@@ -1035,6 +1035,97 @@ button {
 }
 
 @media (max-width: 520px) {
+  .window.work {
+    height: 100svh;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .window.work .window-bar {
+    height: 44px;
+  }
+
+  .window.work .projects {
+    display: flex;
+    height: calc(100svh - 44px);
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-top: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-y: contain;
+  }
+
+  .window.work .projects::-webkit-scrollbar {
+    display: none;
+  }
+
+  .window.work .project,
+  .window.work .project-featured,
+  .window.work .project-compact {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    flex: 0 0 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-right: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .window.work .project-featured .project-copy {
+    order: 2;
+    flex: 1 1 auto;
+    gap: 9px;
+  }
+
+  .window.work .project-featured .featured-thumb {
+    order: 1;
+    height: 43%;
+    min-height: 210px;
+    align-self: auto;
+    aspect-ratio: auto;
+  }
+
+  .window.work .project-title {
+    font-size: 28px;
+  }
+
+  .window.work .project-subtitle {
+    font-size: 16px;
+  }
+
+  .window.work .project-desc {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .window.work .project-meta {
+    gap: 10px;
+  }
+
+  .window.work .project-compact {
+    grid-template-rows: none;
+  }
+
+  .window.work .project-compact .thumb {
+    height: 58%;
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .window.work .project-card-copy {
+    min-height: 0;
+    flex: 0 0 32%;
+    padding: 14px;
+  }
+
   .window-body {
     padding: 16px;
   }
