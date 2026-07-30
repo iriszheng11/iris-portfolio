@@ -29,7 +29,7 @@ body {
   color: var(--ink);
   background:
     linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)),
-    url("./assets/desktop-bg.png") center / cover fixed no-repeat,
+    url("./assets/desktop-bg.webp") center / cover fixed no-repeat,
     #111111;
   font-family: "Courier New", Courier, monospace;
 }

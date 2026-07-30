@@ -27,35 +27,35 @@ const caseStudies = {
     eyebrow: ">> WLFI APP CASE",
     pages: Array.from(
       { length: 18 },
-      (_, index) => `./assets/projects/wlfi-case/page-${String(index + 1).padStart(2, "0")}.png`
+      (_, index) => `./assets/projects/wlfi-case/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
   "gate-community": {
     eyebrow: ">> GATE.IO COMMUNITY CASE",
     pages: Array.from(
       { length: 14 },
-      (_, index) => `./assets/projects/gate-community-case/page-${String(index + 1).padStart(2, "0")}.png`
+      (_, index) => `./assets/projects/gate-community-case/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
   "web3-wallet": {
     eyebrow: ">> WEB3 WALLET CASE",
     pages: Array.from(
       { length: 16 },
-      (_, index) => `./assets/projects/web3-wallet/page-${String(index + 1).padStart(2, "0")}.png`
+      (_, index) => `./assets/projects/web3-wallet/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
   worldclaw: {
     eyebrow: ">> WORLDCLAW CASE",
     pages: Array.from(
       { length: 7 },
-      (_, index) => `./assets/projects/worldclaw/page-${index + 1}.png`
+      (_, index) => `./assets/projects/worldclaw/page-${index + 1}.webp`
     ),
   },
   newsbreak: {
     eyebrow: ">> NEWSBREAK CASE",
     pages: Array.from(
       { length: 32 },
-      (_, index) => `./assets/projects/newsbreak-case/page-${String(index + 1).padStart(2, "0")}.png`
+      (_, index) => `./assets/projects/newsbreak-case/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
 };
