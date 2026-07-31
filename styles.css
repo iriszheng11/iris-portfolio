@@ -226,7 +226,10 @@ button {
   font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
 
-.about .window p {
+.about .window p,
+.experience .timeline-item p,
+.contact .window-body p {
+  font-size: 14px;
   line-height: 1.72;
 }
 
