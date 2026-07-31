@@ -422,7 +422,7 @@ button {
 }
 
 .link-list {
-  border-top: 3px solid var(--line);
+  border-top: 1px solid var(--line);
 }
 
 .contact-row {
@@ -432,7 +432,7 @@ button {
   align-items: center;
   min-height: 62px;
   padding: 12px 16px;
-  border-bottom: 3px solid var(--line);
+  border-bottom: 1px solid var(--line);
   color: var(--line);
   font-family: "Inter", Arial, sans-serif;
   text-decoration: none;
@@ -763,7 +763,7 @@ button {
 .timeline-item {
   padding: 0 0 18px;
   margin: 0 0 18px;
-  border-bottom: 2px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .timeline-item:last-child {
