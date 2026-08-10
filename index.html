@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iris - Designer Portfolio</title>
+    <meta
+      name="description"
+      content="Iris is a multidisciplinary designer creating product interfaces, brand systems, and digital stories with playful precision."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="boot-screen" aria-hidden="true">
+      <div class="boot-grid">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <main class="desktop" id="desktop">
+      <canvas class="cursor-trail" id="cursorTrail" aria-hidden="true"></canvas>
+      <div class="noise"></div>
+      <div class="ticker" aria-hidden="true">
+        <span>IRIS.DESIGN</span>
+        <span>UI SYSTEMS</span>
+        <span>BRAND WORLDS</span>
+        <span>PLAYFUL INTERFACES</span>
+      </div>
+
+      <section class="workspace" id="workspace" aria-label="Iris portfolio cards">
+        <article class="window about" data-card="about">
+          <header class="window-bar">
+            <span>/About</span>
+            <button class="close" aria-label="Close about" data-close="about">x</button>
+          </header>
+          <div class="window-body">
+            <p class="quote">我是 Iris，一名专注于 Web3、金融科技和内容社区产品的 UI/UX Designer。</p>
+            <div class="rule"></div>
+            <p>
+              过去 7 年，我参与并主导过钱包、交易平台、资讯、社区等多类型产品设计，负责从 0-1 产品探索、视觉语言定义，到设计系统搭建与落地。
+            </p>
+            <p>
+              我关注的不只是界面表现，而是如何通过设计降低复杂度，让用户更自然地理解产品，并建立长期信任。
+            </p>
+            <div class="portrait">
+              <img src="./assets/iris-photo.webp" alt="Portrait of Iris" />
+            </div>
+            <div class="rule"></div>
+            <div class="about-notes" aria-label="Iris design focus">
+              <span>7 年产品设计经验</span>
+              <span>资讯 / 社区 / 金融 / Web3</span>
+              <span>APP / Web 多端设计</span>
+              <span>0-1 产品设计主导</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="window contact" data-card="contact">
+          <header class="window-bar">
+            <span>/Contact</span>
+            <button class="close" aria-label="Close contact" data-close="contact">x</button>
+          </header>
+          <div class="window-body">
+            <p>
+              我一直在寻找值得投入的项目。
+            </p>
+            <p>
+              无论是产品设计、视觉系统，还是新的数字体验，如果你的想法足够有趣，欢迎来聊聊
+            </p>
+            <div class="mail-art">
+              <img src="./assets/contact-art.webp" alt="Contact illustration" />
+            </div>
+          </div>
+          <div class="link-list">
+            <a href="mailto:Iriszheng066@gmail.com" class="contact-row email">
+              <span>EMAIL</span>
+              <em>&gt;&gt; Iriszheng066@gmail.com</em>
+            </a>
+            <a href="#" class="contact-row linkedin">
+              <span>WECHAT</span>
+              <em>&gt;&gt; 15631591197</em>
+            </a>
+            <a href="./assets/iris-resume-2026.pdf" class="contact-row resume" target="_blank" rel="noopener">
+              <span>RESUME</span>
+              <em>&gt;&gt; See the detail</em>
+            </a>
+          </div>
+        </article>
+
+        <article class="window work" data-card="work">
+          <header class="window-bar">
+            <span>/My work</span>
+            <button class="close" aria-label="Close work" data-close="work">x</button>
+          </header>
+          <div class="projects">
+            <button class="project project-featured" data-project="WLFIAPP" data-case="wlfi-app">
+              <span class="project-copy">
+                <span class="project-title">WLFI Wallet</span>
+                <span class="project-subtitle">0-1 Web3 Financial Product</span>
+                <span class="project-rule"></span>
+                <span class="project-desc">从 0 定义的 Web3 金融钱包，聚焦资产管理与链上交易体验。</span>
+                <span class="project-meta">
+                  <span><b>ROLE</b> 主设计师</span>
+                  <span><b>YEAR</b> 2026</span>
+                </span>
+              </span>
+              <span class="thumb project-image featured-thumb"><img src="./assets/projects/wlfi-case/cover.webp" alt="WLFI APP project cover" /></span>
+            </button>
+            <button class="project project-compact" data-project="Gate.iO Community" data-case="gate-community">
+              <span class="thumb project-image"><img src="./assets/projects/gate-community-case/cover.webp" alt="Gate.iO Community project cover" /></span>
+              <span class="project-card-copy">
+                <strong>Gate.iO Community</strong>
+                <small>全球化交易平台社区生态设计。</small>
+                <em>VIEW CASE -></em>
+              </span>
+            </button>
+            <button class="project project-compact" data-project="Web3 Wallet" data-case="web3-wallet">
+              <span class="thumb project-image"><img src="./assets/projects/web3-wallet/page-01.webp" alt="Web3 Wallet project cover" /></span>
+              <span class="project-card-copy">
+                <strong>Web3 Wallet</strong>
+                <small>移动端 Web3 钱包产品体验设计。</small>
+                <em>VIEW CASE -></em>
+              </span>
+            </button>
+            <button class="project project-compact" data-project="WorldClaw" data-case="worldclaw">
+              <span class="thumb project-image"><img src="./assets/projects/worldclaw/page-1.webp" alt="WorldClaw project cover" /></span>
+              <span class="project-card-copy">
+                <strong>WorldClaw</strong>
+                <small>Web3 安全与资产保护平台品牌与产品设计。</small>
+                <em>VIEW CASE -></em>
+              </span>
+            </button>
+            <button class="project project-compact" data-project="NewsBreak" data-case="newsbreak">
+              <span class="thumb project-image"><img src="./assets/projects/newsbreak-case/cover.webp" alt="NewsBreak project cover" /></span>
+              <span class="project-card-copy">
+                <strong>NewsBreak</strong>
+                <small>北美本地新闻社区产品。</small>
+                <em>VIEW CASE -></em>
+              </span>
+            </button>
+          </div>
+        </article>
+
+        <article class="window experience" data-card="experience">
+          <header class="window-bar">
+            <span>/Experience</span>
+            <button class="close" aria-label="Close experience" data-close="experience">x</button>
+          </header>
+          <div class="window-body">
+            <div class="timeline-item">
+              <span>&gt;&gt; 2024年4月 - 2026年4月</span>
+              <strong>资深 UI/UX 设计师 @ Tomo(Web3)</strong>
+              <p>负责 0-1 金融产品 WLFI APP 的产品页面设计，主导视觉语言定义与核心页面 UI 设计。</p>
+              <p>负责 AB、Tomo 钱包产品的 0-1 设计，覆盖首页、资产、交易、社区等核心模块，推动设计方案落地。</p>
+            </div>
+            <div class="timeline-item">
+              <span>&gt;&gt; 2022年7月 - 2024年4月</span>
+              <strong>高级 UI 设计师 @ Gate.io</strong>
+              <p>交易所社区业务线 UI Owner，负责 App / Web 端的视觉输出与体验迭代。</p>
+              <p>负责直播、社区动态、社群聊天室、学院等模块设计，提升内容浏览、互动参与和转化体验。</p>
+            </div>
+            <div class="timeline-item">
+              <span>&gt;&gt; 2019年7月 - 2022年7月</span>
+              <strong>UI/UX 设计师 @ NewsBreak</strong>
+              <p>负责 APP / Web 双端的北美本地新闻资讯产品界面设计。</p>
+            </div>
+            <div class="timeline-item">
+              <span>&gt;&gt; 2017年 - 2019年</span>
+              <strong>设计实习生 @ 腾讯 Tencent &amp; Cisco</strong>
+              <p>在腾讯参与腾讯视频网站的 UI 设计，以及负责内部 B 端数据系统的网站设计。</p>
+              <p>在 Cisco 参与 Webex 视频会议相关设计，积累跨团队协作、产品理解和设计落地经验。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="window skills" data-card="skills">
+          <header class="window-bar">
+            <span>/My skill</span>
+            <button class="close" aria-label="Close skills" data-close="skills">x</button>
+          </header>
+          <div class="window-body chips">
+            <span>Product Strategy</span>
+            <span>Design Systems</span>
+            <span>UX Research</span>
+            <span>Art Direction</span>
+            <span>Webflow</span>
+            <span>Figma</span>
+            <span>Interaction Design</span>
+            <span>Brand Identity</span>
+            <span>Prototyping</span>
+            <span>Creative Coding</span>
+          </div>
+        </article>
+
+      </section>
+
+      <nav class="dock" aria-label="Portfolio navigation">
+        <span class="dock-label">/ HELLO, I AM IRIS!</span>
+        <div class="dock-menu">
+          <button class="dock-btn is-open" data-toggle="about">About</button>
+          <button class="dock-btn is-open" data-toggle="work">My work</button>
+          <button class="dock-btn is-open" data-toggle="experience">Experience</button>
+          <button class="dock-btn is-open" data-toggle="skills">My skill</button>
+          <button class="dock-btn is-open" data-toggle="contact">Contact</button>
+        </div>
+        <span class="dock-label">/ NOW DESIGNING DIGITAL WORLDS</span>
+      </nav>
+
+      <dialog id="projectDialog" class="project-dialog">
+        <button class="close dialog-close" aria-label="Close project">x</button>
+        <p class="section-title">&gt;&gt; CASE NOTE</p>
+        <h2 id="dialogTitle">Project</h2>
+        <div id="dialogContent" class="dialog-content">
+          <p>
+            A focused Iris case study placeholder. Replace this with project goals, scope, role,
+            outcomes, and screenshots when the final designer information is ready.
+          </p>
+        </div>
+      </dialog>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
