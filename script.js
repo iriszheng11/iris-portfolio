@@ -26,7 +26,7 @@ const caseStudies = {
   "wlfi-app": {
     eyebrow: ">> WLFI APP CASE",
     pages: Array.from(
-      { length: 18 },
+      { length: 19 },
       (_, index) => `./assets/projects/wlfi-case/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
@@ -40,7 +40,7 @@ const caseStudies = {
   "web3-wallet": {
     eyebrow: ">> WEB3 WALLET CASE",
     pages: Array.from(
-      { length: 16 },
+      { length: 14 },
       (_, index) => `./assets/projects/web3-wallet/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
