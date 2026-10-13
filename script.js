@@ -58,6 +58,12 @@ const caseStudies = {
       (_, index) => `./assets/projects/newsbreak-case/page-${String(index + 1).padStart(2, "0")}.webp`
     ),
   },
+  fourmeme: {
+    eyebrow: ">> FOURMEME CASE",
+    pages: ["./assets/projects/fourmeme/page-01.webp"],
+    demoUrl: "https://resilient-themes-807320.framer.app/",
+    demoLabel: "——Frammer效果展示Demo",
+  },
 };
 
 function resizeTrailCanvas() {
@@ -245,7 +251,7 @@ projectButtons.forEach((button) => {
 
     if (caseStudy) {
       dialog.querySelector(".section-title").textContent = caseStudy.eyebrow;
-      dialogContent.innerHTML = caseStudy.pages
+      const pagesMarkup = caseStudy.pages
         .map(
           (src, index) =>
             `<figure class="case-page"><img src="${src}" alt="${button.dataset.project} page ${
@@ -253,6 +259,10 @@ projectButtons.forEach((button) => {
             }" loading="lazy" /></figure>`
         )
         .join("");
+      const demoMarkup = caseStudy.demoUrl
+        ? `<a class="case-demo-link" href="${caseStudy.demoUrl}" target="_blank" rel="noopener noreferrer">${caseStudy.demoLabel}</a>`
+        : "";
+      dialogContent.innerHTML = pagesMarkup + demoMarkup;
     } else {
       dialog.querySelector(".section-title").textContent = ">> CASE NOTE";
       dialogContent.innerHTML = `<p>A focused Iris case study placeholder. Replace this with project goals, scope, role, outcomes, and screenshots when the final designer information is ready.</p>`;
