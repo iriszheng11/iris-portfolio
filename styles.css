@@ -489,7 +489,7 @@ button {
   gap: 12px;
   padding: 16px;
   border: 0;
-  border-right: 1px solid var(--line);
+  border-right: 0;
   border-bottom: 1px solid var(--line);
   background: var(--cream);
   text-align: left;
@@ -636,7 +636,7 @@ button {
   padding: 0;
   border: 0;
   background: transparent;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Switzer", "Inter", Arial, sans-serif;
   font-size: 21px;
   font-weight: 600;
   line-height: 1.2;
@@ -953,6 +953,32 @@ button {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.case-demo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0 8px;
+  padding: 18px 20px;
+  border: 2px solid var(--line);
+  background: var(--acid);
+  color: var(--line);
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.case-demo-link::after {
+  content: "↗";
+  font-size: 22px;
+}
+
+.case-demo-link:hover,
+.case-demo-link:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #000;
 }
 
 .dialog-close {

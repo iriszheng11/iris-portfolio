@@ -26,21 +26,21 @@ const caseStudies = {
   "wlfi-app": {
     eyebrow: ">> WLFI APP CASE",
     pages: Array.from(
-      { length: 18 },
+      { length: 19 },
       (_, index) => `./assets/projects/wlfi-case/page-${String(index + 1).padStart(2, "0")}.png`
     ),
   },
   "gate-community": {
-    eyebrow: ">> GATE.IO COMMUNITY CASE",
+    eyebrow: ">> GATE COMMUNITY CASE",
     pages: Array.from(
-      { length: 14 },
+      { length: 15 },
       (_, index) => `./assets/projects/gate-community-case/page-${String(index + 1).padStart(2, "0")}.png`
     ),
   },
   "web3-wallet": {
     eyebrow: ">> WEB3 WALLET CASE",
     pages: Array.from(
-      { length: 16 },
+      { length: 14 },
       (_, index) => `./assets/projects/web3-wallet/page-${String(index + 1).padStart(2, "0")}.png`
     ),
   },
@@ -50,12 +50,27 @@ const caseStudies = {
       { length: 7 },
       (_, index) => `./assets/projects/worldclaw/page-${index + 1}.png`
     ),
+    demoUrl: "https://world-claw-web.vercel.app/#world-router",
+    demoLabel: "线上网站",
   },
   newsbreak: {
     eyebrow: ">> NEWSBREAK CASE",
     pages: Array.from(
       { length: 32 },
       (_, index) => `./assets/projects/newsbreak-case/page-${String(index + 1).padStart(2, "0")}.png`
+    ),
+  },
+  fourmeme: {
+    eyebrow: ">> FOURMEME CASE",
+    pages: ["./assets/projects/fourmeme/page-01.png"],
+    demoUrl: "https://resilient-themes-807320.framer.app/",
+    demoLabel: "——Frammer效果展示Demo",
+  },
+  "other-visual-design": {
+    eyebrow: ">> OTHER VISUAL DESIGN",
+    pages: Array.from(
+      { length: 3 },
+      (_, index) => `./assets/projects/other-visual-design/page-${String(index + 1).padStart(2, "0")}.png`
     ),
   },
 };
@@ -245,7 +260,7 @@ projectButtons.forEach((button) => {
 
     if (caseStudy) {
       dialog.querySelector(".section-title").textContent = caseStudy.eyebrow;
-      dialogContent.innerHTML = caseStudy.pages
+      const pagesMarkup = caseStudy.pages
         .map(
           (src, index) =>
             `<figure class="case-page"><img src="${src}" alt="${button.dataset.project} page ${
@@ -253,6 +268,10 @@ projectButtons.forEach((button) => {
             }" loading="lazy" /></figure>`
         )
         .join("");
+      const demoMarkup = caseStudy.demoUrl
+        ? `<a class="case-demo-link" href="${caseStudy.demoUrl}" target="_blank" rel="noopener noreferrer">${caseStudy.demoLabel}</a>`
+        : "";
+      dialogContent.innerHTML = pagesMarkup + demoMarkup;
     } else {
       dialog.querySelector(".section-title").textContent = ">> CASE NOTE";
       dialogContent.innerHTML = `<p>A focused Iris case study placeholder. Replace this with project goals, scope, role, outcomes, and screenshots when the final designer information is ready.</p>`;
